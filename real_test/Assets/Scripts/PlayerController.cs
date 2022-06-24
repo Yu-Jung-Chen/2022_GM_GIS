@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     public float moveSpeed = 5f;
     private int onGround = 0;
-    public int playerHehght;
+    public float playerHehght;
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit raycastHit;
         if(Physics.Raycast(ray, out raycastHit))
         {
-            if(raycastHit.distance<5)
+            if(raycastHit.distance<playerHehght)
             {
                 onGround = 0;
             }

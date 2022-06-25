@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b3a96029332db42905c148252e0ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: inroom
+  loadLevel: 1
 --- !u!65 &592771260
 BoxCollider:
   m_ObjectHideFlags: 0

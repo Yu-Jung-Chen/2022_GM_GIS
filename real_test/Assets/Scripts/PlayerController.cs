@@ -6,6 +6,10 @@ using Valve.VR.InteractionSystem;
 
 public class PlayerController : MonoBehaviour
 {
+     public float jumpForce = 20;
+    float velocity;
+    public SteamVR_Action_Boolean jumpinput;
+    public Rigidbody rb;
     public SteamVR_Action_Vector2 controllerInput;
     private CharacterController characterController;
     public float moveSpeed = 5f;
@@ -14,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
@@ -28,15 +33,22 @@ public class PlayerController : MonoBehaviour
             else
             {
                 onGround = 1;
-            }
+            }          
         }
         Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(controllerInput.axis.x, 0, controllerInput.axis.y));
-        characterController.Move(moveSpeed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up)- onGround *new Vector3(0,9.81f,0)*Time.deltaTime);
-        /*
-        if (controllerInput.axis.magnitude > 0.05f)
-        {
+
+        float gravity = -9.81f;
+
+        velocity += gravity * Time.deltaTime;
+
+        if (jumpinput.GetState(SteamVR_Input_Sources.RightHand)&&onGround==0)
+        {                      
+            velocity = jumpForce;
         }
-        */
+        if (velocity <= 0)
+            velocity = 0;
+      
+        characterController.Move(moveSpeed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up)- onGround *new Vector3(0,9.81f,0)*Time.deltaTime +new Vector3(0, velocity, 0) * Time.deltaTime);
 
     }
 }

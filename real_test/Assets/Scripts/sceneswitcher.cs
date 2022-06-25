@@ -9,6 +9,6 @@ public class sceneswitcher : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(loadLevel);
+        SceneManager.LoadScene(loadLevel,LoadSceneMode.Additive);
     }
 }

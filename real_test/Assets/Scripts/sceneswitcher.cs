@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class sceneswitcher : MonoBehaviour
 {
-    public string loadLevel;
+    public int loadLevel;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {

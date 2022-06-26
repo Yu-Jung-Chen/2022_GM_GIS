@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
       propertyPath: m_Name
-      value: BTC_gc_v1
+      value: BTC_gc_v1 Variant (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837a89d29dbb7d043ae52cf0cbe0ebad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upDownSpeed: 0.4
+  upDownRange: 0.4
   spinSpeed: 50
 --- !u!114 &2108674332
 MonoBehaviour:
@@ -152,7 +154,7 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
---- !u!114 &2108674334
+--- !u!114 &1233860749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +163,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6390464082967487899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c0b8418384b1f47b49b2606ce8b3c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 01b9c5f5e3531a44a9fdb79b4ed71ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

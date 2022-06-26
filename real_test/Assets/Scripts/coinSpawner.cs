@@ -10,7 +10,7 @@ public class coinSpawner : MonoBehaviour
     {
         for (int i = 0; i < 20 ; i++)
         {
-            Instantiate(coin, new Vector3(GetRandom(5), 3, GetRandom(10)), Quaternion.Euler(new Vector3(90,0,0)));
+            Instantiate(coin, new Vector3(GetRandom(5), 3, GetRandom(10)), Quaternion.Euler(new Vector3(90,0,0)),transform);
         }
     }
 

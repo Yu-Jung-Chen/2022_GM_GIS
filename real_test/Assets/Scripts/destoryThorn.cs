@@ -64,6 +64,7 @@ namespace Valve.VR.InteractionSystem
 
         [HideInInspector]
         public Interactable interactable;
+        
 
 
         //-------------------------------------------------
@@ -71,6 +72,7 @@ namespace Valve.VR.InteractionSystem
         {
             velocityEstimator = GetComponent<VelocityEstimator>();
             interactable = GetComponent<Interactable>();
+            
             
 
 
@@ -183,7 +185,7 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity;
             rigidbody.angularVelocity = angularVelocity;
-            timeleft = 1;
+            timeleft = 2;
 
             startCountDown = true;
             
@@ -191,26 +193,24 @@ namespace Valve.VR.InteractionSystem
         }
         bool startCountDown = false;
         public float timeleft=100;
+        public GameObject explosionEffect;
+       
+        //ParticleSystem explosion 
         private void Update()
         {
-            
-            if(startCountDown)
+
+            if (startCountDown)
             {
                 timeleft -= Time.deltaTime;
-                //Debug.Log(timeleft);
+                Debug.Log(timeleft);
 
                 if (timeleft <= 0)
                 {
+                    Instantiate(explosionEffect,transform.position,Quaternion.identity);
                     Destroy(gameObject);
                 }
-
             }
-            
-            
-            
         }
-
-
 
 
         public virtual void GetReleaseVelocities(Hand hand, out Vector3 velocity, out Vector3 angularVelocity)

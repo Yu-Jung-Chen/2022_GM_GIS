@@ -63,6 +63,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7272434135167359131, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -7272434135167359131, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -7272434135167359131, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7272434135167359131, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7272434135167359131, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 34bc05dc3a8482847aadbc913b9700b5, type: 3}
       propertyPath: m_Name
       value: BTC_gc_v1 Variant
@@ -225,3 +245,4 @@ MonoBehaviour:
       m_Calls: []
   interactable: {fileID: 0}
   timeleft: 0
+  explosionEffect: {fileID: 3332175094509935524, guid: 9333bb985cf36494581014db08d88f1d, type: 3}

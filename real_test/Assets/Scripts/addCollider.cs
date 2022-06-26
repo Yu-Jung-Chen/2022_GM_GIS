@@ -15,36 +15,27 @@ public class addCollider : MonoBehaviour
     }
     void AddCollider(Transform target)
     {
-        foreach (Transform childObject in target)
+        if (!target.GetComponent<MeshFilter>())
         {
-            if(!childObject.GetComponent<MeshFilter>())
+            foreach (Transform childObject in target)
             {
-                if (target.childCount != 0)
-                {
-                    for (int i = 0; i < target.childCount; i++)
-                    {
-                        AddCollider(target.GetChild(i).transform);
-                    }
-                }
+                AddCollider(childObject.transform);
             }
-            else
+        }
+        else
+        {
+            Mesh mesh = target.gameObject.GetComponent<MeshFilter>().mesh;
+
+            // If we've found a mesh we can use it to add a collider
+            if (mesh != null)
             {
-                Mesh mesh = childObject.gameObject.GetComponent<MeshFilter>().mesh;
 
-                // If we've found a mesh we can use it to add a collider
-                if (mesh != null)
-                {
+                // Add a new MeshCollider to the child object
+                MeshCollider meshCollider = target.gameObject.AddComponent<MeshCollider>();
 
-                    // Add a new MeshCollider to the child object
-                    MeshCollider meshCollider = childObject.gameObject.AddComponent<MeshCollider>();
-
-                    // Finaly we set the Mesh in the MeshCollider
-                    meshCollider.sharedMesh = mesh;
-                }
-              
+                // Finaly we set the Mesh in the MeshCollider
+                meshCollider.sharedMesh = mesh;
             }
-            // First we get the Mesh attached to the child object
-            
 
         }
     }

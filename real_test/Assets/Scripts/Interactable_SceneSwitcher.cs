@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Valve.VR.InteractionSystem
 {
@@ -243,6 +245,7 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
+        public TextMeshPro message;
         /// <summary>
         /// Called when a Hand starts hovering over this object
         /// </summary>
@@ -258,6 +261,7 @@ namespace Valve.VR.InteractionSystem
                 CreateHighlightRenderers();
                 UpdateHighlightRenderers();
             }
+            message.text = "Grab To teleport";
         }
 
 
@@ -277,6 +281,7 @@ namespace Valve.VR.InteractionSystem
                 if (highlightOnHover && highlightHolder != null)
                     Destroy(highlightHolder);
             }
+            message.text = "";
         }
 
         protected virtual void Update()
@@ -310,6 +315,7 @@ namespace Valve.VR.InteractionSystem
             }
 
             attachedToHand = hand;
+            SceneManager.LoadScene(0);
         }
 
         protected virtual void OnDetachedFromHand(Hand hand)

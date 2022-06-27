@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class rotatewithvrcam : MonoBehaviour
 {
+    GameObject VRcamera =GameObject
     // Start is called before the first frame update
     void Start()
     {

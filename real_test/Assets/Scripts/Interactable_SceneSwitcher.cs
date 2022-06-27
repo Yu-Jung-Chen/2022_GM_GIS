@@ -1,10 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: This object will get hover events and can be attached to the hands
+//
+//=============================================================================
+
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Valve.VR.InteractionSystem
 {
+    //-------------------------------------------------------------------------
     public class Interactable_SceneSwitcher : MonoBehaviour
     {
         [Tooltip("Activates an action set on attach and deactivates on detach")]

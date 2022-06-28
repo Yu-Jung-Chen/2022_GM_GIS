@@ -18,6 +18,7 @@ namespace Valve.VR.InteractionSystem
     [RequireComponent(typeof(Rigidbody))]
     public class destoryThorn : MonoBehaviour
     {
+        gameController gc;
         
         [EnumFlags]
         [Tooltip("The flags used to attach this object to the hand.")]
@@ -72,6 +73,7 @@ namespace Valve.VR.InteractionSystem
         {
             velocityEstimator = GetComponent<VelocityEstimator>();
             interactable = GetComponent<Interactable>();
+            gc = GetComponentInParent<gameController>();
             
             
 
@@ -207,6 +209,7 @@ namespace Valve.VR.InteractionSystem
                 if (timeleft <= 0)
                 {
                     Instantiate(explosionEffect,transform.position,Quaternion.identity);
+                    gc.addscore();
                     Destroy(gameObject);
                 }
             }

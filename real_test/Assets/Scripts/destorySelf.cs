@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class destorySelf : MonoBehaviour
 {
-  
-    private void OnTriggerEnter(Collider other)
+    float lifeTime = 0;
+    private void Update()
     {
-        Debug.Log("collision");
-        Destroy(gameObject);
+        lifeTime += Time.deltaTime;
+        if(lifeTime>3)
+        {
+            
+            Destroy(gameObject);
+        }
     }
 }

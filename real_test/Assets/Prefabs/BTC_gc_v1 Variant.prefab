@@ -244,5 +244,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
-  timeleft: 0
-  explosionEffect: {fileID: 3332175094509935524, guid: 9333bb985cf36494581014db08d88f1d, type: 3}
+  pickupEffect: {fileID: 4014962837277364393, guid: ac299ae010cc8fd4eb79fc4b3503a57f, type: 3}

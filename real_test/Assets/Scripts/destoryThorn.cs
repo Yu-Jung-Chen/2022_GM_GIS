@@ -18,6 +18,7 @@ namespace Valve.VR.InteractionSystem
     [RequireComponent(typeof(Rigidbody))]
     public class destoryThorn : MonoBehaviour
     {
+        gameController gc;
         
         [EnumFlags]
         [Tooltip("The flags used to attach this object to the hand.")]
@@ -72,6 +73,7 @@ namespace Valve.VR.InteractionSystem
         {
             velocityEstimator = GetComponent<VelocityEstimator>();
             interactable = GetComponent<Interactable>();
+            gc = GetComponentInParent<gameController>();
             
             
 
@@ -142,8 +144,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         protected virtual void OnAttachedToHand(Hand hand)
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.useGravity = true;
+           
 
             //Debug.Log("<b>[SteamVR Interaction]</b> Pickup: " + hand.GetGrabStarting().ToString());
 
@@ -185,15 +186,15 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity;
             rigidbody.angularVelocity = angularVelocity;
-            timeleft = 2;
+            timeleft = 1;
 
             startCountDown = true;
             
 
         }
         bool startCountDown = false;
-        public float timeleft=100;
-        public GameObject explosionEffect;
+        float timeleft=100;
+        public GameObject pickupEffect;
        
         //ParticleSystem explosion 
         private void Update()
@@ -201,12 +202,14 @@ namespace Valve.VR.InteractionSystem
 
             if (startCountDown)
             {
+                transform.position += new Vector3(0, 2 * Time.deltaTime, 0);
                 timeleft -= Time.deltaTime;
-                Debug.Log(timeleft);
+                
 
                 if (timeleft <= 0)
                 {
-                    Instantiate(explosionEffect,transform.position,Quaternion.identity);
+                    Instantiate(pickupEffect,transform.position,Quaternion.identity);
+                    gc.addscore();
                     Destroy(gameObject);
                 }
             }

@@ -23,12 +23,12 @@ public class followPlayer : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(0,vrCam.transform.rotation.eulerAngles.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.I))
+        /*if(Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log($"turnAngle= {turnAngel}");
             Debug.Log($"player transform rotation = {followWho.transform.rotation.eulerAngles.y}");
             Debug.Log($"vrcam transform rotation = {vrCam.transform.rotation.eulerAngles.y}");
-        }
+        }*/
 
         
     }

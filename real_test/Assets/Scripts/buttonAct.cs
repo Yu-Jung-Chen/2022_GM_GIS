@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class buttonAct : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int[] cameraplace = { 0, 0 };
+    int north;
+    int south;
+    int east;
+    int west;
 
-    // Update is called once per frame
-    void Update()
+    int camersize;
+
+    public GameObject BigCam;
+    public GameObject BigCamIcon;
+    public GameObject WorldMap;
+    public GameObject Buttons;
+
+    private void Awake()
     {
-        
+        BigCam = GameObject.Find("worldCam");
+        BigCamIcon = GameObject.Find("minimapCamAndIcon/bigmapicon");
+        WorldMap = GameObject.Find("Canvas/map");
+        Buttons = GameObject.Find("Canvas/worldmap");
     }
 }

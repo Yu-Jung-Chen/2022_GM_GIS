@@ -24,4 +24,9 @@ public class buttonAct : MonoBehaviour
         WorldMap = GameObject.Find("Canvas/map");
         Buttons = GameObject.Find("Canvas/worldmap");
     }
+
+    public void camUp()
+    {
+
+    }
 }

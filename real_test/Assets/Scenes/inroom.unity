@@ -400,8 +400,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 158.859, y: 29.934578, z: 1}
-  m_Center: {x: 0.04128114, y: -0.22806539, z: 0}
+  m_Size: {x: 160, y: 30, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &206590521
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +952,8 @@ GameObject:
   - component: {fileID: 780415001}
   - component: {fileID: 780415000}
   - component: {fileID: 780414999}
+  - component: {fileID: 780415003}
+  - component: {fileID: 780415002}
   m_Layer: 5
   m_Name: right
   m_TagString: Untagged
@@ -1022,7 +1024,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 780415000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 780415003}
+        m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
+        m_MethodName: camRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &780415000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1075,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780414997}
   m_CullTransparentMesh: 1
+--- !u!61 &780415002
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780414997}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 160, y: 30}
+  m_EdgeRadius: 0
+--- !u!114 &780415003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780414997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1 &831247405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1243,8 @@ GameObject:
   - component: {fileID: 864463269}
   - component: {fileID: 864463268}
   - component: {fileID: 864463267}
+  - component: {fileID: 864463271}
+  - component: {fileID: 864463270}
   m_Layer: 5
   m_Name: minus
   m_TagString: Untagged
@@ -1257,7 +1315,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 864463268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864463271}
+        m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
+        m_MethodName: minus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &864463268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1366,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864463265}
   m_CullTransparentMesh: 1
+--- !u!61 &864463270
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864463265}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
+--- !u!114 &864463271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864463265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1 &880411051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1464,8 @@ GameObject:
   - component: {fileID: 941552024}
   - component: {fileID: 941552023}
   - component: {fileID: 941552022}
+  - component: {fileID: 941552026}
+  - component: {fileID: 941552025}
   m_Layer: 5
   m_Name: plus
   m_TagString: Untagged
@@ -1422,7 +1536,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 941552023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941552026}
+        m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
+        m_MethodName: plus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &941552023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,6 +1587,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941552020}
   m_CullTransparentMesh: 1
+--- !u!61 &941552025
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941552020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
+--- !u!114 &941552026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941552020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1 &967123767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1834,7 @@ GameObject:
   - component: {fileID: 1180501437}
   - component: {fileID: 1180501436}
   - component: {fileID: 1180501439}
+  - component: {fileID: 1180501440}
   m_Layer: 5
   m_Name: down
   m_TagString: Untagged
@@ -1736,7 +1905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180501437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180501440}
+        m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
+        m_MethodName: camDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1180501437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1801,6 +1982,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 160, y: 30}
   m_EdgeRadius: 0
+--- !u!114 &1180501440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180501434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1 &1244910460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2635,8 @@ GameObject:
   - component: {fileID: 1716705170}
   - component: {fileID: 1716705169}
   - component: {fileID: 1716705168}
+  - component: {fileID: 1716705171}
+  - component: {fileID: 1716705172}
   m_Layer: 5
   m_Name: left
   m_TagString: Untagged
@@ -2508,7 +2707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716705169}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1716705172}
+        m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
+        m_MethodName: camLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1716705169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2547,6 +2758,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716705166}
   m_CullTransparentMesh: 1
+--- !u!61 &1716705171
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716705166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 160, y: 30}
+  m_EdgeRadius: 0
+--- !u!114 &1716705172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716705166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1 &1822147881
 GameObject:
   m_ObjectHideFlags: 0

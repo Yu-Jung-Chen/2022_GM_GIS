@@ -59,4 +59,10 @@ public class buttonAct : MonoBehaviour
         BigCam.GetComponent<Camera>().orthographicSize += 50;
         BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
     }
+
+    public void close()
+    {
+        WorldMap.SetActive(false);
+        Buttons.SetActive(false);
+    }
 }

@@ -45,7 +45,7 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "collectableBall")
+        if (e.target.tag == "collectableBall")
         {
             onPointerOutside.Invoke();
             Debug.Log("out  ball");

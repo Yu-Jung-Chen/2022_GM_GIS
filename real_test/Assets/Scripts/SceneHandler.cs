@@ -19,37 +19,19 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "up")
+        if (e.target.GetType()==typeof(Button))
         {
-            Debug.Log("up was clicked");
-        }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was clicked");
+            Debug.Log("clicked button");
         }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "up")
-        {
-            Debug.Log("up was entered");
-        }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was entered");
-        }
+
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "up")
-        {
-            Debug.Log("up was exited");
-        }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was exited");
-        }
+        
     }
 }

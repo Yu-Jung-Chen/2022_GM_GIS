@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3be043eef000f498c7508052407e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
+  laserPointer: {fileID: 1349012410}
 --- !u!1001 &1647768327
 PrefabInstance:
   m_ObjectHideFlags: 0

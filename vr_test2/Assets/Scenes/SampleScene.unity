@@ -1263,6 +1263,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925857486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &982590194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 767825359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &982590195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982590194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4330f56e6b2ca4344a8b39fec4e85590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerInput:
+    actionPath: /actions/default/in/Touchpad
+    needsReinit: 0
+  moveSpeed: 5
 --- !u!1 &1084233291
 GameObject:
   m_ObjectHideFlags: 0

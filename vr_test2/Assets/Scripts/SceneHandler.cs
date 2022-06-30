@@ -29,13 +29,19 @@ public class SceneHandler : MonoBehaviour
     public void PointerInside(object sender, PointerEventArgs e)
     {
         if(e.target.tag=="collectableBall")
-        onPointerInside.Invoke();
+        {
+            onPointerInside.Invoke();
+        }
+        
         
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
         if (e.target.name == "collectableBall")
+        {
             onPointerOutside.Invoke();
+        }
+            
     }
 }

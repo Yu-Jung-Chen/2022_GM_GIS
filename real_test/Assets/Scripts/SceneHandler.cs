@@ -32,6 +32,13 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        
+        if (e.target.name == "Cube")
+        {
+            Debug.Log("Cube was exited");
+        }
+        else if (e.target.name == "Button")
+        {
+            Debug.Log("Button was exited");
+        }
     }
 }

@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 177972926}
   - component: {fileID: 177972925}
   - component: {fileID: 177972924}
-  - component: {fileID: 177972927}
   - component: {fileID: 177972928}
   m_Layer: 5
   m_Name: up
@@ -323,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 177972927}
+      - m_Target: {fileID: 1634452897}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: camUp
         m_Mode: 1
@@ -373,22 +372,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177972922}
   m_CullTransparentMesh: 1
---- !u!114 &177972927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177972922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &177972928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -695,7 +678,6 @@ GameObject:
   - component: {fileID: 528331524}
   - component: {fileID: 528331523}
   - component: {fileID: 528331522}
-  - component: {fileID: 528331526}
   - component: {fileID: 528331527}
   m_Layer: 5
   m_Name: cancel
@@ -769,7 +751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528331526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: close
         m_Mode: 1
@@ -819,22 +801,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528331520}
   m_CullTransparentMesh: 1
---- !u!114 &528331526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528331520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &528331527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -995,7 +961,6 @@ GameObject:
   - component: {fileID: 780415001}
   - component: {fileID: 780415000}
   - component: {fileID: 780414999}
-  - component: {fileID: 780415003}
   - component: {fileID: 780415004}
   m_Layer: 5
   m_Name: right
@@ -1068,7 +1033,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 780415003}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: camRight
         m_Mode: 1
@@ -1118,22 +1083,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780414997}
   m_CullTransparentMesh: 1
---- !u!114 &780415003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780414997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &780415004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1273,7 +1222,6 @@ GameObject:
   - component: {fileID: 864463269}
   - component: {fileID: 864463268}
   - component: {fileID: 864463267}
-  - component: {fileID: 864463271}
   - component: {fileID: 864463272}
   m_Layer: 5
   m_Name: minus
@@ -1346,7 +1294,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 864463271}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: minus
         m_Mode: 1
@@ -1396,22 +1344,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864463265}
   m_CullTransparentMesh: 1
---- !u!114 &864463271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864463265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &864463272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1481,7 +1413,6 @@ GameObject:
   - component: {fileID: 941552024}
   - component: {fileID: 941552023}
   - component: {fileID: 941552022}
-  - component: {fileID: 941552026}
   - component: {fileID: 941552027}
   m_Layer: 5
   m_Name: plus
@@ -1554,7 +1485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 941552026}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: plus
         m_Mode: 1
@@ -1604,22 +1535,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941552020}
   m_CullTransparentMesh: 1
---- !u!114 &941552026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941552020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &941552027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1837,7 +1752,6 @@ GameObject:
   - component: {fileID: 1180501438}
   - component: {fileID: 1180501437}
   - component: {fileID: 1180501436}
-  - component: {fileID: 1180501440}
   - component: {fileID: 1180501441}
   m_Layer: 5
   m_Name: down
@@ -1910,7 +1824,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1180501440}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: camDown
         m_Mode: 1
@@ -1960,22 +1874,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180501434}
   m_CullTransparentMesh: 1
---- !u!114 &1180501440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180501434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &1180501441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2467,6 +2365,7 @@ GameObject:
   - component: {fileID: 1634452893}
   - component: {fileID: 1634452892}
   - component: {fileID: 1634452896}
+  - component: {fileID: 1634452897}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2571,6 +2470,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 1349012410}
+--- !u!114 &1634452897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634452891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigCam: {fileID: 0}
+  BigCamIcon: {fileID: 0}
+  WorldMap: {fileID: 0}
+  Buttons: {fileID: 0}
 --- !u!1001 &1647768327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2640,7 +2555,6 @@ GameObject:
   - component: {fileID: 1716705170}
   - component: {fileID: 1716705169}
   - component: {fileID: 1716705168}
-  - component: {fileID: 1716705172}
   - component: {fileID: 1716705173}
   m_Layer: 5
   m_Name: left
@@ -2713,7 +2627,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1716705172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonAct, Assembly-CSharp
         m_MethodName: camLeft
         m_Mode: 1
@@ -2763,22 +2677,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716705166}
   m_CullTransparentMesh: 1
---- !u!114 &1716705172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716705166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2057ec4fbcd7c3b44b07c0877178eabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigCam: {fileID: 0}
-  BigCamIcon: {fileID: 0}
-  WorldMap: {fileID: 0}
-  Buttons: {fileID: 0}
 --- !u!65 &1716705173
 BoxCollider:
   m_ObjectHideFlags: 0

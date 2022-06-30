@@ -26,7 +26,7 @@ public class SceneHandler : MonoBehaviour
         if (e.target.tag == "collectableBall")
         {
             onPointerClick.Invoke();
-            Debug.log("Clicked ball");
+            Debug.Log("Clicked ball");
            
         }
             
@@ -37,7 +37,7 @@ public class SceneHandler : MonoBehaviour
         if(e.target.tag=="collectableBall")
         {
             onPointerInside.Invoke();
-            Debug.log("in ball");
+            Debug.Log("in ball");
         }
         
         
@@ -48,7 +48,7 @@ public class SceneHandler : MonoBehaviour
         if (e.target.name == "collectableBall")
         {
             onPointerOutside.Invoke();
-            Debug.log("out  ball");
+            Debug.Log("out  ball");
         }
             
     }

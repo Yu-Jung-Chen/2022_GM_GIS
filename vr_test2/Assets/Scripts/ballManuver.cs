@@ -19,7 +19,7 @@ public class ballManuver : MonoBehaviour
     {
         if(lookingAtPlayer)
         {
-            Vector3 targetPostition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+            Vector3 targetPostition = new Vector3(target.transform.position.x, infoCanvasTransform.position.y, target.transform.position.z);
             infoCanvasTransform.LookAt(targetPostition);
         }
         if(pickedup)

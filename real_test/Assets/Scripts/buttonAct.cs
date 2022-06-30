@@ -78,8 +78,8 @@ public class buttonAct : MonoBehaviour
 
     private void Update()
     {
-        GameObject.Find("Canvas/worldmap/minus").SetActive(!(camersize >= originCamSize));
-        GameObject.Find("Canvas/worldmap/plus").SetActive(!(camersize <= GameObject.Find("minimapCamAndIcon/minimap_Camera").GetComponent<Camera>().orthographicSize));
-        GameObject.Find("Canvas/worldmap/OK").SetActive(camersize <= minimapCamsize);
+        GameObject.Find("Canvas/worldmap/minus").SetActive(camersize >= originCamSize);
+        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= GameObject.Find("minimapCamAndIcon/minimap_Camera").GetComponent<Camera>().orthographicSize);
+        GameObject.Find("Canvas/worldmap/OK").SetActive(!(camersize <= minimapCamsize));
     }
 }

@@ -7,11 +7,11 @@ using Valve.VR.InteractionSystem;
 public class playerController : MonoBehaviour
 {
     public SteamVR_Action_Vector2 controllerInput;
-    private CharacterController characterController;
+    //private CharacterController characterController;
     public float moveSpeed = 5f;
     private void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        //characterController = GetComponent<CharacterController>();
     }
     void Update()
     {
@@ -19,7 +19,7 @@ public class playerController : MonoBehaviour
         {
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(controllerInput.axis.x, 0, controllerInput.axis.y));
             //characterController.Move(moveSpeed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up)-new Vector3(0,9.81f,0)*Time.deltaTime);
-            characterController.Move(moveSpeed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) );
+            transform.position += moveSpeed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) ;
 
         }
         

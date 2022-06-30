@@ -11,7 +11,7 @@ public class playerController : MonoBehaviour
     public float moveSpeed = 5f;
     private void Start()
     {
-        //characterController = GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
     }
     void Update()
     {

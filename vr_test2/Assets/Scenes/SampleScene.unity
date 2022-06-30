@@ -2055,7 +2055,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1430492315}
         m_TargetAssemblyTypeName: ballManuver, Assembly-CSharp
-        m_MethodName: LookAtPlayer
+        m_MethodName: pickedUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2372,7 +2372,7 @@ PrefabInstance:
       objectReference: {fileID: 767825360}
     - target: {fileID: 813450393655869420, guid: 568b360dfeff59940bb7483aa48f8f33, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 813450393655869420, guid: 568b360dfeff59940bb7483aa48f8f33, type: 3}
       propertyPath: m_LocalScale.x

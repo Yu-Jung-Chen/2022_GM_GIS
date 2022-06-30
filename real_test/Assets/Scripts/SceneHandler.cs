@@ -19,7 +19,7 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.GetType()==typeof(Button))
+        if (e.target.GetComponent<Button>() !=null )
         {
             Debug.Log("clicked button");
         }
@@ -32,7 +32,7 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "up")
         {
             Debug.Log("Cube was exited");
         }

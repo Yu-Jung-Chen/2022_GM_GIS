@@ -57,11 +57,17 @@ public class buttonAct : MonoBehaviour
     {
         BigCam.GetComponent<Camera>().orthographicSize -= minimapCamsize;
         BigCamIcon.transform.localScale -=new Vector3(5,5,0);
+        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= minimapCamsize);
+        GameObject.Find("Canvas/worldmap/OK").SetActive(!(camersize <= BigCam.GetComponent<Camera>().orthographicSize));
+        GameObject.Find("Canvas/worldmap/minus").SetActive(camersize >= originCamSize);
     }
     public void minus()
     {
         BigCam.GetComponent<Camera>().orthographicSize += minimapCamsize;
         BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
+        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= minimapCamsize);
+        GameObject.Find("Canvas/worldmap/OK").SetActive(!(camersize <= BigCam.GetComponent<Camera>().orthographicSize));
+        GameObject.Find("Canvas/worldmap/minus").SetActive(camersize >= originCamSize);
     }
 
     public void close()
@@ -77,9 +83,5 @@ public class buttonAct : MonoBehaviour
 
     private void Update()
     {
-        minimapCamsize= BigCam.GetComponent<Camera>().orthographicSize;
-        GameObject.Find("Canvas/worldmap/minus").SetActive(camersize >= originCamSize);
-        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= minimapCamsize);
-        GameObject.Find("Canvas/worldmap/OK").SetActive(!(camersize <= minimapCamsize));
     }
 }

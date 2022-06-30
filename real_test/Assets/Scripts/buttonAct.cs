@@ -32,6 +32,7 @@ public class buttonAct : MonoBehaviour
     {
         CamTransform.position = new Vector3(BigCam.transform.position.x + 50, BigCam.transform.position.y, BigCam.transform.position.z);
         cameraplace[0]++;
+        Debug.Log("up was clicked buttonact");
     }
     public void camDown()
     {

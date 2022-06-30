@@ -9,7 +9,7 @@ public class ballManuver : MonoBehaviour
     Transform infoCanvasTransform;
     float timeElapsed = 0;
     bool pickedup=false;
-    public bool lookingAtPlayer = false;
+    bool lookingAtPlayer = false;
     Rigidbody rb;
     private void Start()
     {

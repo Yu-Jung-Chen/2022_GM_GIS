@@ -5,11 +5,23 @@ using TMPro;
 
 public class ballManuver : MonoBehaviour
 {
+    [SerializeField] GameObject target;
+    Transform infoCanvasTransform;
     float timeElapsed = 0;
     bool pickedup=false;
+    public bool lookingAtPlayer = false;
     Rigidbody rb;
+    private void Start()
+    {
+        infoCanvasTransform=transform.GetChild(0).transform;
+    }
     private void Update()
     {
+        if(lookingAtPlayer)
+        {
+            Vector3 targetPostition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+            infoCanvasTransform.LookAt(targetPostition);
+        }
         if(pickedup)
         {
             
@@ -37,5 +49,13 @@ public class ballManuver : MonoBehaviour
     public void NoShowHint()
     {
         text.text = ("");
+    }
+    public void LookAtPlayer()
+    {
+        lookingAtPlayer = true;
+    }
+    public void NoLookAtPlayer()
+    {
+        lookingAtPlayer = false;
     }
 }

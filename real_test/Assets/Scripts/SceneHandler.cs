@@ -24,7 +24,6 @@ public class SceneHandler : MonoBehaviour
         if (e.target.GetComponent<Button>() !=null )
         {
             var button = e.target.GetComponent<Button>();
-            Debug.Log("clicked button");
             ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
         }
     }
@@ -34,7 +33,6 @@ public class SceneHandler : MonoBehaviour
         if (e.target.GetComponent<Button>() != null)
         {
             var button = e.target.GetComponent<Button>();
-            Debug.Log("enter button");
             button.Select();
         }
     }
@@ -44,7 +42,6 @@ public class SceneHandler : MonoBehaviour
         if (e.target.GetComponent<Button>() != null)
         {
             var button = e.target.GetComponent<Button>();
-            Debug.Log("leave button");
             EventSystem.current.SetSelectedGameObject(null);
         }
     }

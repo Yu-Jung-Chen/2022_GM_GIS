@@ -36,7 +36,6 @@ public class buttonAct : MonoBehaviour
     {
         CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + 50);
         cameraplace[0]++;
-        Debug.Log("up was clicked buttonact");
     }
     public void camDown()
     {
@@ -78,8 +77,9 @@ public class buttonAct : MonoBehaviour
 
     private void Update()
     {
+        minimapCamsize= BigCam.GetComponent<Camera>().orthographicSize;
         GameObject.Find("Canvas/worldmap/minus").SetActive(camersize >= originCamSize);
-        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= GameObject.Find("minimapCamAndIcon/minimap_Camera").GetComponent<Camera>().orthographicSize);
+        GameObject.Find("Canvas/worldmap/plus").SetActive(camersize <= minimapCamsize);
         GameObject.Find("Canvas/worldmap/OK").SetActive(!(camersize <= minimapCamsize));
     }
 }

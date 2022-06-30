@@ -10,7 +10,9 @@ public class buttonAct : MonoBehaviour
     int east;
     int west;
 
-    int camersize;
+    float camersize;
+    float originCamSize;
+    float minimapCamsize;
 
     public GameObject BigCam;
     public GameObject BigCamIcon;
@@ -26,38 +28,40 @@ public class buttonAct : MonoBehaviour
         WorldMap = GameObject.Find("Canvas/map");
         Buttons = GameObject.Find("Canvas/worldmap");
         CamTransform = BigCam.transform;
+        originCamSize = BigCam.GetComponent<Camera>().orthographicSize;
+        minimapCamsize= GameObject.Find("minimapCamAndIcon/minimap_Camera").GetComponent<Camera>().orthographicSize;
     }
 
     public void camUp()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x + 50, BigCam.transform.position.y, BigCam.transform.position.z);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + 50);
         cameraplace[0]++;
         Debug.Log("up was clicked buttonact");
     }
     public void camDown()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x - 50, BigCam.transform.position.y, BigCam.transform.position.z);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - 50);
         cameraplace[0]--;
     }
     public void camLeft()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + 50);
+         CamTransform.position = new Vector3(BigCam.transform.position.x - 50, BigCam.transform.position.y, BigCam.transform.position.z);
         cameraplace[1]++;
     }
     public void camRight()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - 50);
+        CamTransform.position = new Vector3(BigCam.transform.position.x + 50, BigCam.transform.position.y, BigCam.transform.position.z);
         cameraplace[1]--;
     }
 
     public void plus()
     {
-        BigCam.GetComponent<Camera>().orthographicSize -= 50;
+        BigCam.GetComponent<Camera>().orthographicSize -= minimapCamsize;
         BigCamIcon.transform.localScale -=new Vector3(5,5,0);
     }
     public void minus()
     {
-        BigCam.GetComponent<Camera>().orthographicSize += 50;
+        BigCam.GetComponent<Camera>().orthographicSize += minimapCamsize;
         BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
     }
 
@@ -65,5 +69,17 @@ public class buttonAct : MonoBehaviour
     {
         WorldMap.SetActive(false);
         Buttons.SetActive(false);
+    }
+
+    public void trans()
+    {
+        
+    }
+
+    private void Update()
+    {
+        GameObject.Find("Canvas/worldmap/minus").SetActive(!(camersize >= originCamSize));
+        GameObject.Find("Canvas/worldmap/plus").SetActive(!(camersize <= GameObject.Find("minimapCamAndIcon/minimap_Camera").GetComponent<Camera>().orthographicSize));
+        GameObject.Find("Canvas/worldmap/OK").SetActive(camersize <= minimapCamsize);
     }
 }

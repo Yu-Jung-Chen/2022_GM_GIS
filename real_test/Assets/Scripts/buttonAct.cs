@@ -18,6 +18,7 @@ public class buttonAct : MonoBehaviour
     public GameObject BigCamIcon;
     public GameObject WorldMap;
     public GameObject Buttons;
+    public GameObject Player;
 
     Transform CamTransform;
 
@@ -58,6 +59,7 @@ public class buttonAct : MonoBehaviour
         BigCam.GetComponent<Camera>().orthographicSize -= minimapCamsize;
         BigCamIcon.transform.localScale -=new Vector3(5,5,0);
         GameObject.Find("Canvas/worldmap/minus").SetActive(true);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
         if (camersize <= minimapCamsize)
         {
             GameObject.Find("Canvas/worldmap/plus").SetActive(false);
@@ -70,6 +72,7 @@ public class buttonAct : MonoBehaviour
         BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
         GameObject.Find("Canvas/worldmap/plus").SetActive(true);
         GameObject.Find("Canvas/worldmap/OK").SetActive(false);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
         if (camersize >= originCamSize)
             GameObject.Find("Canvas/worldmap/minus").SetActive(false);
     }
@@ -82,6 +85,9 @@ public class buttonAct : MonoBehaviour
 
     public void trans()
     {
-        ;
+        RaycastHit raycastHit;
+        Ray ray = new Ray(BigCam.transform.position, Vector3.down);
+        Physics.Raycast(ray, out raycastHit);
+        Player.transform.position = BigCam.transform.position - new Vector3(0, raycastHit.distance, 0);
     }
 }

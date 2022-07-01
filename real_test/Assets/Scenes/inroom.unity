@@ -383,8 +383,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 160, y: 30, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 320, y: 60, z: 3}
+  m_Center: {x: 0, y: -15, z: 0}
 --- !u!1 &206590521
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,8 +812,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 40, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 80, y: 80, z: 3}
+  m_Center: {x: -20, y: -20, z: 0}
 --- !u!1 &630902901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,8 +1094,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 160, y: 30, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 320, y: 60, z: 3}
+  m_Center: {x: 0, y: -15, z: 0}
 --- !u!1 &831247405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,8 +1247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 20}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: -30, y: 30}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864463267
 MonoBehaviour:
@@ -1355,7 +1355,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 40, z: 3}
+  m_Size: {x: 60, y: 60, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &880411051
 GameObject:
@@ -1438,8 +1438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 60}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: -30, y: 90}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941552022
 MonoBehaviour:
@@ -1481,7 +1481,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 941552023}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1546,7 +1546,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 40, z: 3}
+  m_Size: {x: 60, y: 60, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &967123767
 GameObject:
@@ -1885,8 +1885,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 160, y: 30, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 320, y: 60, z: 3}
+  m_Center: {x: 0, y: -15, z: 0}
 --- !u!1 &1244910460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2159,7 @@ GameObject:
   - component: {fileID: 1557574163}
   - component: {fileID: 1557574162}
   - component: {fileID: 1557574161}
+  - component: {fileID: 1557574164}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -2281,6 +2282,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557574159}
   m_CullTransparentMesh: 1
+--- !u!65 &1557574164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557574159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 110, y: 110, z: 3}
+  m_Center: {x: 27.5, y: 27.5, z: 0}
 --- !u!1 &1592877995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,8 +2715,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 160, y: 30, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 320, y: 60, z: 3}
+  m_Center: {x: 0, y: -15, z: 0}
 --- !u!1 &1822147881
 GameObject:
   m_ObjectHideFlags: 0

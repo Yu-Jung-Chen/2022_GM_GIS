@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class buttonAct : MonoBehaviour
 {
-    int northlim;
-    int southlim;
-    int eastlim;
-    int westlim;
-
+    float northlim;
+    float southlim;
+    float eastlim;
+    float westlim;
+    float camtop;
+    float cambottom;
+    float camleft;
+    float camright;
     float camersize;
     float originCamSize;
     float minimapCamsize;
@@ -36,6 +39,11 @@ public class buttonAct : MonoBehaviour
         GameObject.Find("Canvas/worldmap/down").SetActive(false);
         GameObject.Find("Canvas/worldmap/left").SetActive(false);
         GameObject.Find("Canvas/worldmap/right").SetActive(false);
+
+        northlim = BigCam.transform.position.z + originCamSize / 2;
+        southlim = BigCam.transform.position.z - originCamSize / 2;
+        westlim = BigCam.transform.position.x - originCamSize / 2;
+        eastlim = BigCam.transform.position.x + originCamSize / 2;
     }
 
     public void camUp()
@@ -85,6 +93,22 @@ public class buttonAct : MonoBehaviour
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         if (camersize >= originCamSize)
             GameObject.Find("Canvas/worldmap/minus").SetActive(false);
+
+        camtop = BigCam.transform.position.z + camersize;
+        if(camtop>=northlim)
+            GameObject.Find("Canvas/worldmap/up").SetActive(false);
+
+        cambottom = BigCam.transform.position.z - camersize;
+        if(cambottom<=southlim)
+            GameObject.Find("Canvas/worldmap/down").SetActive(false);
+
+        camleft = BigCam.transform.position.x - camersize;
+        if(camleft<=westlim)
+            GameObject.Find("Canvas/worldmap/left").SetActive(false);
+
+        camright = BigCam.transform.position.x + camersize;
+        if(camright>=eastlim)
+            GameObject.Find("Canvas/worldmap/right").SetActive(false);
     }
 
     public void close()

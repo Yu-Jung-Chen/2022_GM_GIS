@@ -2498,6 +2498,7 @@ MonoBehaviour:
   BigCamIcon: {fileID: 0}
   WorldMap: {fileID: 0}
   Buttons: {fileID: 0}
+  Player: {fileID: 1971079822}
 --- !u!1001 &1647768327
 PrefabInstance:
   m_ObjectHideFlags: 0

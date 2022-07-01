@@ -50,6 +50,7 @@ public class buttonAct : MonoBehaviour
     {
         CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + minimapCamsize);
         GameObject.Find("Canvas/worldmap/down").SetActive(true);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
         camtop = BigCam.transform.position.z + camersize;
         if (camtop >= northlim)
             GameObject.Find("Canvas/worldmap/up").SetActive(false);
@@ -58,6 +59,8 @@ public class buttonAct : MonoBehaviour
     {
         CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - minimapCamsize);
         GameObject.Find("Canvas/worldmap/up").SetActive(true);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
+        cambottom = BigCam.transform.position.z - camersize;
         if (cambottom <= southlim)
             GameObject.Find("Canvas/worldmap/down").SetActive(false);
     }
@@ -65,6 +68,8 @@ public class buttonAct : MonoBehaviour
     {
          CamTransform.position = new Vector3(BigCam.transform.position.x - minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/right").SetActive(true);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
+        camleft = BigCam.transform.position.x - camersize;
         if (camleft <= westlim)
             GameObject.Find("Canvas/worldmap/left").SetActive(false);
     }
@@ -72,6 +77,8 @@ public class buttonAct : MonoBehaviour
     {
         CamTransform.position = new Vector3(BigCam.transform.position.x + minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/left").SetActive(true);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
+        camright = BigCam.transform.position.x + camersize;
         if (camright >= eastlim)
             GameObject.Find("Canvas/worldmap/right").SetActive(false);
     }
@@ -87,6 +94,21 @@ public class buttonAct : MonoBehaviour
             GameObject.Find("Canvas/worldmap/plus").SetActive(false);
             GameObject.Find("Canvas/worldmap/OK").SetActive(true);
         }
+
+        GameObject.Find("Canvas/worldmap/up").SetActive(true);
+        GameObject.Find("Canvas/worldmap/down").SetActive(true);
+        GameObject.Find("Canvas/worldmap/left").SetActive(true);
+        GameObject.Find("Canvas/worldmap/right").SetActive(true);
+    }
+    public void minus()
+    {
+        BigCam.GetComponent<Camera>().orthographicSize += minimapCamsize;
+        BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
+        GameObject.Find("Canvas/worldmap/plus").SetActive(true);
+        GameObject.Find("Canvas/worldmap/OK").SetActive(false);
+        camersize = BigCam.GetComponent<Camera>().orthographicSize;
+        if (camersize >= originCamSize)
+            GameObject.Find("Canvas/worldmap/minus").SetActive(false);
 
         camtop = BigCam.transform.position.z + camersize;
         if (camtop >= northlim)
@@ -112,21 +134,6 @@ public class buttonAct : MonoBehaviour
             GameObject.Find("Canvas/worldmap/right").SetActive(false);
         else
             GameObject.Find("Canvas/worldmap/right").SetActive(true);
-    }
-    public void minus()
-    {
-        BigCam.GetComponent<Camera>().orthographicSize += minimapCamsize;
-        BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
-        GameObject.Find("Canvas/worldmap/plus").SetActive(true);
-        GameObject.Find("Canvas/worldmap/OK").SetActive(false);
-        camersize = BigCam.GetComponent<Camera>().orthographicSize;
-        if (camersize >= originCamSize)
-            GameObject.Find("Canvas/worldmap/minus").SetActive(false);
-
-        GameObject.Find("Canvas/worldmap/up").SetActive(true);
-        GameObject.Find("Canvas/worldmap/down").SetActive(true);
-        GameObject.Find("Canvas/worldmap/left").SetActive(true);
-        GameObject.Find("Canvas/worldmap/right").SetActive(true);
     }
 
     public void close()

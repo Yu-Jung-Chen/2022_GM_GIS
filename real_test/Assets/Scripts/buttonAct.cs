@@ -48,23 +48,32 @@ public class buttonAct : MonoBehaviour
 
     public void camUp()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + 50);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + minimapCamsize);
         GameObject.Find("Canvas/worldmap/down").SetActive(true);
+        camtop = BigCam.transform.position.z + camersize;
+        if (camtop >= northlim)
+            GameObject.Find("Canvas/worldmap/up").SetActive(false);
     }
     public void camDown()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - 50);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - minimapCamsize);
         GameObject.Find("Canvas/worldmap/up").SetActive(true);
+        if (cambottom <= southlim)
+            GameObject.Find("Canvas/worldmap/down").SetActive(false);
     }
     public void camLeft()
     {
-         CamTransform.position = new Vector3(BigCam.transform.position.x - 50, BigCam.transform.position.y, BigCam.transform.position.z);
+         CamTransform.position = new Vector3(BigCam.transform.position.x - minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/right").SetActive(true);
+        if (camleft <= westlim)
+            GameObject.Find("Canvas/worldmap/left").SetActive(false);
     }
     public void camRight()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x + 50, BigCam.transform.position.y, BigCam.transform.position.z);
+        CamTransform.position = new Vector3(BigCam.transform.position.x + minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/left").SetActive(true);
+        if (camright >= eastlim)
+            GameObject.Find("Canvas/worldmap/right").SetActive(false);
     }
 
     public void plus()
@@ -79,10 +88,30 @@ public class buttonAct : MonoBehaviour
             GameObject.Find("Canvas/worldmap/OK").SetActive(true);
         }
 
-        GameObject.Find("Canvas/worldmap/up").SetActive(true);
-        GameObject.Find("Canvas/worldmap/down").SetActive(true);
-        GameObject.Find("Canvas/worldmap/left").SetActive(true);
-        GameObject.Find("Canvas/worldmap/right").SetActive(true);
+        camtop = BigCam.transform.position.z + camersize;
+        if (camtop >= northlim)
+            GameObject.Find("Canvas/worldmap/up").SetActive(false);
+        else
+            GameObject.Find("Canvas/worldmap/up").SetActive(true);
+
+
+        cambottom = BigCam.transform.position.z - camersize;
+        if (cambottom <= southlim)
+            GameObject.Find("Canvas/worldmap/down").SetActive(false);
+        else
+            GameObject.Find("Canvas/worldmap/down").SetActive(true);
+
+        camleft = BigCam.transform.position.x - camersize;
+        if (camleft <= westlim)
+            GameObject.Find("Canvas/worldmap/left").SetActive(false);
+        else
+            GameObject.Find("Canvas/worldmap/left").SetActive(true);
+
+        camright = BigCam.transform.position.x + camersize;
+        if (camright >= eastlim)
+            GameObject.Find("Canvas/worldmap/right").SetActive(false);
+        else
+            GameObject.Find("Canvas/worldmap/right").SetActive(true);
     }
     public void minus()
     {
@@ -94,21 +123,10 @@ public class buttonAct : MonoBehaviour
         if (camersize >= originCamSize)
             GameObject.Find("Canvas/worldmap/minus").SetActive(false);
 
-        camtop = BigCam.transform.position.z + camersize;
-        if(camtop>=northlim)
-            GameObject.Find("Canvas/worldmap/up").SetActive(false);
-
-        cambottom = BigCam.transform.position.z - camersize;
-        if(cambottom<=southlim)
-            GameObject.Find("Canvas/worldmap/down").SetActive(false);
-
-        camleft = BigCam.transform.position.x - camersize;
-        if(camleft<=westlim)
-            GameObject.Find("Canvas/worldmap/left").SetActive(false);
-
-        camright = BigCam.transform.position.x + camersize;
-        if(camright>=eastlim)
-            GameObject.Find("Canvas/worldmap/right").SetActive(false);
+        GameObject.Find("Canvas/worldmap/up").SetActive(true);
+        GameObject.Find("Canvas/worldmap/down").SetActive(true);
+        GameObject.Find("Canvas/worldmap/left").SetActive(true);
+        GameObject.Find("Canvas/worldmap/right").SetActive(true);
     }
 
     public void close()

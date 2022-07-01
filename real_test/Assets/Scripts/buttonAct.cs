@@ -39,7 +39,6 @@ public class buttonAct : MonoBehaviour
         GameObject.Find("Canvas/worldmap/down").SetActive(false);
         GameObject.Find("Canvas/worldmap/left").SetActive(false);
         GameObject.Find("Canvas/worldmap/right").SetActive(false);
-        GameObject.Find("worldCam/teleportpoint").SetActive(false);
 
         northlim = BigCam.transform.position.z + originCamSize / 2;
         southlim = BigCam.transform.position.z - originCamSize / 2;
@@ -94,7 +93,6 @@ public class buttonAct : MonoBehaviour
         {
             GameObject.Find("Canvas/worldmap/plus").SetActive(false);
             GameObject.Find("Canvas/worldmap/OK").SetActive(true);
-            GameObject.Find("worldCam/teleportpoint").SetActive(true);
         }
 
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
@@ -132,7 +130,6 @@ public class buttonAct : MonoBehaviour
         BigCamIcon.transform.localScale += new Vector3(5, 5, 0);
         GameObject.Find("Canvas/worldmap/plus").SetActive(true);
         GameObject.Find("Canvas/worldmap/OK").SetActive(false);
-        GameObject.Find("worldCam/teleportpoint").SetActive(false);
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         if (camersize >= originCamSize)
             GameObject.Find("Canvas/worldmap/minus").SetActive(false);

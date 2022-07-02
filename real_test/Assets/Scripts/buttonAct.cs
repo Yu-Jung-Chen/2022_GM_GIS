@@ -175,4 +175,10 @@ public class buttonAct : MonoBehaviour
         WorldMap.SetActive(false);
         Buttons.SetActive(false);
     }
+
+    public void openWorldMap()
+    {
+        WorldMap.SetActive(true);
+        Buttons.SetActive(true);
+    }
 }

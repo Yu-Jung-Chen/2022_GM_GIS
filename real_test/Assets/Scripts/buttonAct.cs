@@ -39,6 +39,8 @@ public class buttonAct : MonoBehaviour
         GameObject.Find("Canvas/worldmap/down").SetActive(false);
         GameObject.Find("Canvas/worldmap/left").SetActive(false);
         GameObject.Find("Canvas/worldmap/right").SetActive(false);
+        WorldMap.SetActive(false);
+        Buttons.SetActive(false);
 
         northlim = BigCam.transform.position.z + originCamSize / 2;
         southlim = BigCam.transform.position.z - originCamSize / 2;
@@ -48,7 +50,7 @@ public class buttonAct : MonoBehaviour
 
     public void camUp()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + minimapCamsize);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z + minimapCamsize/2);
         GameObject.Find("Canvas/worldmap/down").SetActive(true);
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         camtop = BigCam.transform.position.z + camersize/2;
@@ -57,7 +59,7 @@ public class buttonAct : MonoBehaviour
     }
     public void camDown()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - minimapCamsize);
+        CamTransform.position = new Vector3(BigCam.transform.position.x, BigCam.transform.position.y, BigCam.transform.position.z - minimapCamsize/2);
         GameObject.Find("Canvas/worldmap/up").SetActive(true);
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         cambottom = BigCam.transform.position.z - camersize/2;
@@ -66,7 +68,7 @@ public class buttonAct : MonoBehaviour
     }
     public void camLeft()
     {
-         CamTransform.position = new Vector3(BigCam.transform.position.x - minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
+         CamTransform.position = new Vector3(BigCam.transform.position.x - minimapCamsize/2, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/right").SetActive(true);
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         camleft = BigCam.transform.position.x - camersize/2;
@@ -75,7 +77,7 @@ public class buttonAct : MonoBehaviour
     }
     public void camRight()
     {
-        CamTransform.position = new Vector3(BigCam.transform.position.x + minimapCamsize, BigCam.transform.position.y, BigCam.transform.position.z);
+        CamTransform.position = new Vector3(BigCam.transform.position.x + minimapCamsize/2, BigCam.transform.position.y, BigCam.transform.position.z);
         GameObject.Find("Canvas/worldmap/left").SetActive(true);
         camersize = BigCam.GetComponent<Camera>().orthographicSize;
         camright = BigCam.transform.position.x + camersize/2;
